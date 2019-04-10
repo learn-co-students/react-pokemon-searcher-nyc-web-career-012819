@@ -4,9 +4,11 @@ import { Card } from 'semantic-ui-react'
 
 class PokemonCollection extends React.Component {
   render() {
+    let pokemonsArr = this.props.pokemons.map(pokemon => <PokemonCard pokemon={pokemon}/>)
     return (
       <Card.Group itemsPerRow={6}>
         <h1>Hello From Pokemon Collection</h1>
+        {pokemonsArr}
       </Card.Group>
     )
   }
